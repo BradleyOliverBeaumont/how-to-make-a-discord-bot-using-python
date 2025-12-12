@@ -24,13 +24,13 @@ step 2. create 2 files one called "bot.py" and one called ".env".
 step 3. now copy my versions of bot.py and .env into your files you have just created.
 
 step 4. then go to the discord developer portal (https://discord.com/developers/) and follow these instructions:
-  Create Your Bot in the Developer Portal:
-      1. Go to Discord Developer Portal
+Create Your Bot in the Developer Portal:
+    1. Go to Discord Developer Portal
             Click New Application → name it
-      2. In Bot tab click reset bot token (For security purposes, tokens can only be viewed once, when created. If you forgot or lost access to your token, please regenerate a new one.)
-      3. Then Copy your Bot Token (⚠ keep it secret, like a password) and paste it into your .env file after "DISCORD_TOKEN=" make sure you delete "YOUR_BOT_TOKEN_HERE" and add your bot token
-      4. In Bot tab → Add Bot
-              Enable MESSAGE CONTENT INTENT (others optional)
+    2. In Bot tab click reset bot token (For security purposes, tokens can only be viewed once, when created. If you forgot or lost access to your token, please regenerate a new one.)
+    3. Then Copy your Bot Token (⚠ keep it secret, like a password) and paste it into your .env file after "DISCORD_TOKEN=" make sure you delete "YOUR_BOT_TOKEN_HERE" and add your bot token
+    4. In Bot tab → Add Bot
+            Enable MESSAGE CONTENT INTENT (others optional)
 
 step 5. Install Dependencies needed for your discord bot if your on windows open your command prompt and copy and paste this: 
     pip install discord.py python-dotenv
