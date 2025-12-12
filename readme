@@ -16,10 +16,10 @@ Below is a simple, complete, beginner-friendly guide on how to make a Discord bo
 step 1. create a folder on you desktop called "My discord bot" then open that folder in vs code.
 
 step 2. create 2 files one called "bot.py" and one called ".env".
-          Project Folder should look like this:
-                My discord bot/
-                      bot.py
-                      .env
+        Project Folder should look like this:
+          My discord bot/
+                    bot.py
+                    .env
 
 step 3. now copy my versions of bot.py and .env into your files you have just created.
 
