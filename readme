@@ -12,16 +12,20 @@ What You’ll Need;
 Below is a simple, complete, beginner-friendly guide on how to make a Discord bot in Python, using the requirements listed. I’ll show you step-by-step how to create the bot, write the code, run it, and invite it to your server.
 
 🛠 Step‑By‑Step Setup
-1. Create Your Bot in the Developer Portal
+
+1. Create Your Bot in the Developer Portal:
+
   Go to Discord Developer Portal
 
   Click New Application → name it
 
+  In Bot tab click reset bot token (For security purposes, tokens can only be viewed once, when created. If you forgot or lost access to your token, please regenerate a new one.)
+
+  Then Copy your Bot Token (⚠ keep it secret, like a password) and paste it into your .env file after "DISCORD_TOKEN=" make sure you delete "YOUR_BOT_TOKEN_HERE" and add your bot token
+
   In Bot tab → Add Bot
 
   Enable MESSAGE CONTENT INTENT (others optional)
-
-  Copy your Bot Token (⚠ keep it secret, like a password)
 
 2. Project Folder
   discord-bot/
