@@ -24,52 +24,19 @@ Below is a simple, complete, beginner-friendly guide on how to make a Discord bo
   Copy your Bot Token (⚠ keep it secret, like a password)
 
 2. Project Folder
-  Code
   discord-bot/
       bot.py
       .env
-      cogs/
-          __init__.py
-          basic.py
 
 3. Install Dependencies
   bash
   pip install discord.py python-dotenv
-4. Write Your Bot Code (safe version)
-  python
-    # bot.py
-    import os
-    import discord
-    from discord.ext import commands
-    from dotenv import load_dotenv
 
-    # Load token from .env file
-    load_dotenv()
-    TOKEN = os.getenv("DISCORD_TOKEN")
+4. then copy .env (create a file called .env and copy my version included)
 
-    # Intents
-    intents = discord.Intents.default()
-    intents.message_content = True
+5. then copy bot.py (create a file called bot.py and copy my version included)
 
-    # Bot setup
-    bot = commands.Bot(command_prefix="!", intents=intents)
-
-    @bot.event
-    async def on_ready():
-        print(f"✅ Logged in as {bot.user}")
-
-    # Simple command
-    @bot.command()
-    async def hello(ctx):
-        await ctx.send("Hello! 👋 I'm alive!")
-
-    bot.run(TOKEN)
-    .env file:
-
-    Code
-    DISCORD_TOKEN=YOUR_BOT_TOKEN_HERE
-
-5. Run Your Bot
+6. Run Your Bot
   bash
   python bot.py
 
@@ -77,7 +44,7 @@ If successful:
   Code
   ✅ Logged in as <botname>
 
-6. Invite Bot to Your Server
+7. Invite Bot to Your Server
   Developer Portal → OAuth2 → URL Generator
 
   Scopes: bot, applications.commands
