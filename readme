@@ -1,0 +1,87 @@
+How to Make a Discord Bot in Python
+
+What You’ll Need;
+
+1. Python 3.10+ (install from python.org, check “Add Python to PATH” during setup)
+2. VS Code (with the Microsoft Python extension)
+3. Discord Developer Portal account (to create your bot and get its token)
+4. Hosting method:
+  Self‑hosting (bot runs only while your PC is on)
+  Cloud hosting (Replit, Railway, VPS) for 24/7 uptime
+
+Below is a simple, complete, beginner-friendly guide on how to make a Discord bot in Python, using the requirements listed. I’ll show you step-by-step how to create the bot, write the code, run it, and invite it to your server.
+
+🛠 Step‑By‑Step Setup
+1. Create Your Bot in the Developer Portal
+  Go to Discord Developer Portal
+
+  Click New Application → name it
+
+  In Bot tab → Add Bot
+
+  Enable MESSAGE CONTENT INTENT (others optional)
+
+  Copy your Bot Token (⚠ keep it secret, like a password)
+
+2. Project Folder
+  Code
+  discord-bot/
+      bot.py
+      .env
+      cogs/
+          __init__.py
+          basic.py
+
+3. Install Dependencies
+  bash
+  pip install discord.py python-dotenv
+4. Write Your Bot Code (safe version)
+  python
+    # bot.py
+    import os
+    import discord
+    from discord.ext import commands
+    from dotenv import load_dotenv
+
+    # Load token from .env file
+    load_dotenv()
+    TOKEN = os.getenv("DISCORD_TOKEN")
+
+    # Intents
+    intents = discord.Intents.default()
+    intents.message_content = True
+
+    # Bot setup
+    bot = commands.Bot(command_prefix="!", intents=intents)
+
+    @bot.event
+    async def on_ready():
+        print(f"✅ Logged in as {bot.user}")
+
+    # Simple command
+    @bot.command()
+    async def hello(ctx):
+        await ctx.send("Hello! 👋 I'm alive!")
+
+    bot.run(TOKEN)
+    .env file:
+
+    Code
+    DISCORD_TOKEN=YOUR_BOT_TOKEN_HERE
+
+5. Run Your Bot
+  bash
+  python bot.py
+
+If successful:
+  Code
+  ✅ Logged in as <botname>
+
+6. Invite Bot to Your Server
+  Developer Portal → OAuth2 → URL Generator
+
+  Scopes: bot, applications.commands
+
+  Permissions: Send Messages, Use Slash Commands (add more if needed)
+
+  Copy URL → paste in browser → select server → Authorize
