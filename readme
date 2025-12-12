@@ -13,52 +13,38 @@ Below is a simple, complete, beginner-friendly guide on how to make a Discord bo
 
 🛠 Step‑By‑Step Setup
 
-step 1. create a folder on you desktop called my discord bot then open it in vs code.
+step 1. create a folder on you desktop called "My discord bot" then open that folder in vs code.
 
-step 2. then create 2 files one called "bot.py" and one called ".env".
-          Project Folder:
-            My discord bot/
-                  bot.py
-                  .env
+step 2. create 2 files one called "bot.py" and one called ".env".
+          Project Folder should look like this:
+                My discord bot/
+                      bot.py
+                      .env
 
 step 3. now copy my versions of bot.py and .env into your files you have just created.
 
-step 4. then go to the discord developer portal (https://discord.com/developers/)
-1. Create Your Bot in the Developer Portal:
+step 4. then go to the discord developer portal (https://discord.com/developers/) and follow these instructions:
+  Create Your Bot in the Developer Portal:
+      1. Go to Discord Developer Portal
+            Click New Application → name it
+      2. In Bot tab click reset bot token (For security purposes, tokens can only be viewed once, when created. If you forgot or lost access to your token, please regenerate a new one.)
+      3. Then Copy your Bot Token (⚠ keep it secret, like a password) and paste it into your .env file after "DISCORD_TOKEN=" make sure you delete "YOUR_BOT_TOKEN_HERE" and add your bot token
+      4. In Bot tab → Add Bot
+              Enable MESSAGE CONTENT INTENT (others optional)
 
-  Go to Discord Developer Portal
+step 5. Install Dependencies needed for your discord bot if your on windows open your command prompt and copy and paste this: 
+    pip install discord.py python-dotenv
 
-  Click New Application → name it
+step 6. Run Your Bot in vs code, with the bot.py file open click the little play button top right when you hover over should say "Run python file"
+      If successful:
+        Code
+        ✅ Logged in as <botname>
 
-  In Bot tab click reset bot token (For security purposes, tokens can only be viewed once, when created. If you forgot or lost access to your token, please regenerate a new one.)
-
-  Then Copy your Bot Token (⚠ keep it secret, like a password) and paste it into your .env file after "DISCORD_TOKEN=" make sure you delete "YOUR_BOT_TOKEN_HERE" and add your bot token
-
-  In Bot tab → Add Bot
-
-  Enable MESSAGE CONTENT INTENT (others optional)
-
-3. Install Dependencies
-  bash
-  pip install discord.py python-dotenv
-
-4. then copy .env (create a file called .env and copy my version included)
-
-5. then copy bot.py (create a file called bot.py and copy my version included)
-
-6. Run Your Bot
-  bash
-  python bot.py
-
-If successful:
-  Code
-  ✅ Logged in as <botname>
-
-7. Invite Bot to Your Server
-  Developer Portal → OAuth2 → URL Generator
-
-  Scopes: bot, applications.commands
-
-  Permissions: Send Messages, Use Slash Commands (add more if needed)
-
-  Copy URL → paste in browser → select server → Authorize
+step 7. Invite Bot to Your Server
+        Developer Portal → OAuth2 → URL Generator
+      
+        Scopes: bot, applications.commands
+      
+        Permissions: Send Messages, Use Slash Commands (add more if needed)
+      
+        Copy URL → paste in browser → select server → Authorize
